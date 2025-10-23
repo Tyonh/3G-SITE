@@ -13,35 +13,38 @@
 /* Estilos gerais do corpo da página para demonstração */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
+/* Header */
 .main-nav {
   background-color: var(--vermelho);
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .logo img {
   height: 60px;
-  margin-right: 20px;
-  justify-content: flex-start;
-  display: flex;
+  margin-left: 20px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .nav-links {
   display: flex;
   flex-direction: row;
   padding: 10px;
-
   list-style: none;
-  gap: 15%;
+  gap: 80px;
   margin: 0;
   padding: 0;
 
-  font-size: 2vw; /* Tamanho da fonte responsivo */
-  white-space: nowrap; /* Evita quebras de linha */
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -52,4 +55,42 @@ body {
 
 .nav-links a:hover {
   color: #2b0606;
+}
+
+/* Main */
+.modular video {
+  height: 600px;
+  /* Ocupa o restante da largura (100% - 40%) */
+  width: 60%;
+
+  object-fit: cover; /* Garante que o vídeo cubra todo o espaço sem distorcer */
+}
+
+.modular {
+  display: flex;
+  /* Garante que o container ocupe toda a altura da tela, 
+       ajuste conforme o restante do seu layout */
+  height: 100vh;
+  width: 100%;
+  /* Posiciona os elementos internos (texto, imagem, vídeo) de forma relativa */
+  position: relative;
+  /* Garante que a imagem e o vídeo não ultrapassem o container */
+  overflow: hidden;
+}
+
+.modular img {
+  /* Tira a imagem do fluxo normal e a coloca no canto do .text-content */
+  position: absolute;
+  bottom: 0;
+  /* Ajuste para alinhar com a borda do painel (40% - metade da largura da imagem) */
+  left: calc(40% - 200px);
+
+  /* Altura e largura da imagem, ajuste conforme a proporção real */
+  height: 60%;
+  width: auto;
+  max-height: 90vh;
+  z-index: 3; /* Garante que o refletor fique por cima de tudo */
+
+  /* Remove o fundo preto do PNG para o fundo cinza claro aparecer */
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }

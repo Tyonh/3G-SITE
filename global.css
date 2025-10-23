@@ -77,7 +77,11 @@ body {
   padding: 20px;
   flex-direction: column;
   display: flex;
-  gap: px;
+  gap: 5px;
+
+  width: 30%; /* Define que o conteúdo de texto ocupa os 40% restantes */
+  align-items: center; /* Centraliza o título, imagem e botões */
+  justify-content: center; /* Centraliza verticalmente todo o bloco de texto */
 }
 
 .text-content a {
@@ -86,6 +90,26 @@ body {
 
 .text-content h1 {
   font-size: 36px;
+}
+
+.carac {
+  display: flex;
+  gap: 15px;
+  min-height: 80px;
+  position: relative;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Estilo para as imagens dentro de .carac */
+.carac img {
+  height: 50px; /* Altura fixa para todas as imagens */
+  width: auto; /* Largura automática mantendo proporção */
+  object-fit: contain;
 }
 
 .btn {
@@ -122,7 +146,7 @@ body {
 
   /* Remove o fundo preto do PNG para o fundo cinza claro aparecer */
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
-  right: 58%;
+  right: 52%;
 
   /* Isso centraliza a imagem verticalmente na tela.
   */

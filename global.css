@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: 0;
+}
+/* FONTE DE CORES */
+:root {
+  --vermelho: #b12b30;
+  --branco-cinza: #f3f3f3;
+  --cinza-escuro: #6c6c6b;
+}
+
+/* Estilos gerais do corpo da página para demonstração */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-nav {
+  background-color: var(--vermelho);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 20px;
+  justify-content: flex-start;
+  display: flex;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+
+  list-style: none;
+  gap: 15%;
+  margin: 0;
+  padding: 0;
+
+  font-size: 2vw; /* Tamanho da fonte responsivo */
+  white-space: nowrap; /* Evita quebras de linha */
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--branco-cinza);
+}
+
+.nav-links a:hover {
+  color: #2b0606;
+}
